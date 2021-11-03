@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Cookies im Einsatz</h1>
+    @{ 
+        if (ViewBag.CookieInfos != null)
+            {
+                <p>@ViewBag.CookieInfos</p>
+            }
+    }
+    <div>
+        <form method="post" action="/home/index">
+            <select name="Hintergrund">                
+                <option value="red">rot</option>
+                <option value="blue">blau</option>
+                <option value="cyan">cyan</option>
+                <option value="green">grün</option>
+                <option value="yellow">gelb</option>
+            </select>
+            <label>Hintergrund</label>
+            <br />
+            <select name="Vordergrund">
+                <option value="red">rot</option>
+                <option value="blue">blau</option>
+                <option selected value="cyan">cyan</option>
+                <option value="green">grün</option>
+                <option value="yellow">gelb</option>
+            </select>
+            <label>Vordergrund</label>
+            <br />
+            <button>Speichern</button>
+        </form>
+    </div>
+
+
+    <div>
+        @*https://www.blindtextgenerator.de/*@
+        <textarea maxlength=5555 style="width:80%;color:@ViewBag.FrontColor; background-color:@ViewBag.BackgroundColor;font-size:x-large">
+Die Internationale Arbeitsorganisation (ILO) ist die älteste Sonderorganisation der Vereinten Nationen mit Hauptsitz in Genf. Sie ist zuständig für die Entwicklung, Formulierung und Durchsetzung verbindlicher internationaler Arbeits- und Sozialstandards. 
+Hauptziele der ILO sind die Förderung von menschenwürdiger Arbeit, sozialer Sicherung und die Stärkung des sozialen Dialogs.
+
+Das Gesetz zur Sicherung der Eingliederung Schwerbehinderter in Arbeit, Beruf und Gesellschaft (Schwerbehindertengesetz – SchwbG) regelte von 1953 bis 2001 wesentliche Bereiche des Schwerbehindertenrechts in Deutschland, darunter
+die Feststellung des Grades der Behinderung
+die Verpflichtung der Arbeitgeber zur Beschäftigung von Schwerbehinderten
+der Kündigungsschutz für Schwerbehinderte
+die Schwerbehindertenvertretungen in Unternehmen
+die Werkstätten für behinderte Menschen 
+die unentgeltliche Beförderung im Nahverkehr.
+
+2001 wurde es durch das Neunte Buch des Sozialgesetzbuchs abgelöst.
+
+</textarea>
+    </div>
+
+</body>
+</html>
